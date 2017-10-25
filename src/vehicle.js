@@ -8,7 +8,7 @@ class Vehicle {
     }
     set numofseats(value) {
     	if (typeof value !== "number") {
-      		throw new ReferenceError ("numofseats must be an integer");
+      		throw ReferenceError ("numofseats must be an integer");
     	}
 
     	this._numofseats = value;
@@ -28,13 +28,13 @@ class Vehicle {
     }
 
 	getDescription() {
-		console.log ("This vehicle has " + this.numofseats + " seats and " + this.numofdoors + " doors ");
+		return "This vehicle has " + this.numofseats + " seats and " + this.numofdoors + " doors ";
 	}
 	accelerate(){
-		console.log("vroom vroom");
+		return "vroom vroom";
 	}
 	getVehiclePapers(){
-		console.log("Here are your car papers");
+		return "Here are your car papers";
 	}
 }
 

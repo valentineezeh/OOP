@@ -8,7 +8,7 @@ class Motorcycle extends Vehicle {
 		this.numofwheels = 2;
 	}
     getVehiclePapers(){
-		console.log("Your vehicle has " + this.numofwheels + " wheels and as a result, you get a class A license")
+		return "Your vehicle has " + this.numofwheels + " wheels and as a result, you get a class A license"
 	}
 
 }
