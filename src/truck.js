@@ -10,7 +10,7 @@ class Truck extends Vehicle {
 		this.numofwheels = 8;
 	}
 	getVehiclePapers(){
-		console.log("Your vehicle has " + this.numofwheels + " wheels and as a result, you get a class C license")
+		return "Your vehicle has " + this.numofwheels + " wheels and as a result, you get a class C license"
 	}
 }
 
