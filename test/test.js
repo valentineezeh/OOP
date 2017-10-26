@@ -106,9 +106,9 @@ describe("Motorcycle", () => {
 			 assert.equal(truckInstance.numofseats, 4);
 		 });
 		 it ("can be changed", () => {
-			 carInstance.numofseats = 10;
+			 truckInstance.numofseats = 10;
 
-			 assert.equal(truckInstance.numofseats, 4);
+			 assert.equal(truckInstance.numofseats, 10);
 
 		 });
 		 it ("returns 'vroom vroom' when vehicle accelerate", function () {
