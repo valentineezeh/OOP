@@ -58,7 +58,7 @@ describe("Motorcycle", () => {
 		before(() =>{
 		 motorcycleInstance = new Motorcycle (1, 0, 2);
 		});
-		it ("returns the number of doors", () => {
+		it ("returns the number of seats", () => {
 			assert.equal(motorcycleInstance.numofseats, 1);
 		});
 
@@ -72,22 +72,25 @@ describe("Motorcycle", () => {
  });
  describe("Car", () => {
  	describe ("numofseats", () => {
- 		// let vehicleInstance;
+ 		// for vehicleInstance;
  		before(() =>{
- 		 carInstance = new Car (4, 0, 2);
+ 		 carInstance = new Car (4, 4, 4);
  		});
- 		it ("returns the number of doors", () => {
+ 		it ("returns the number of seats", () => {
  			assert.equal(carInstance.numofseats, 4);
  		});
  		it ("can be changed", () => {
- 			carInstance.numofseats = 10;
- 			assert.equal(carInstance.numofseats, 10);
+ 			carInstance.numofseats = 4;
+ 			assert.equal(carInstance.numofseats, 4);
 
  		});
+		it ("returns 'vroom vroom' when vehicle accelerate", function () {
+			 assert.equal(carInstance.accelerate(), "vroom vroom");
+		});
 
  	//ReferenceError
-       	it ("returns 'Your vehicle has 2 wheels and as a result, you get a class A license' for a method of getVehiclePapers", function () {
- 						assert.equal(motorcycleInstance.getVehiclePapers(), "Your vehicle has 2 wheels and as a result, you get a class A license");
+       	it ("returns 'Here are your car papers' for a method of getVehiclePapers", function () {
+ 						assert.equal(carInstance.getVehiclePapers(), "Here are your car papers");
        	});
      });
 
@@ -97,20 +100,23 @@ describe("Motorcycle", () => {
 	 describe ("numofseats", () => {
 		 // let vehicleInstance;
 		 before(() =>{
-			truckInstance = new Car (4, 0, 2);
+			truckInstance = new Truck (4, 4, 8);
 		 });
-		 it ("returns the number of doors", () => {
-			 assert.equal(carInstance.numofseats, 10);
+		 it ("returns the number of seats", () => {
+			 assert.equal(truckInstance.numofseats, 4);
 		 });
 		 it ("can be changed", () => {
 			 carInstance.numofseats = 10;
-			 assert.equal(carInstance.numofseats, 10);
+
+			 assert.equal(truckInstance.numofseats, 4);
 
 		 });
-
+		 it ("returns 'vroom vroom' when vehicle accelerate", function () {
+		 		assert.equal(truckInstance.accelerate(), "vroom vroom");
+		 });
 	 //ReferenceError
-				 it ("returns 'Your vehicle has 2 wheels and as a result, you get a class A license' for a method of getVehiclePapers", function () {
-						 assert.equal(motorcycleInstance.getVehiclePapers(), "Your vehicle has 2 wheels and as a result, you get a class A license");
+				 it ("returns 'Your vehicle has 8 wheels and as a result, you get a class A license' for a method of getVehiclePapers", function () {
+						 assert.equal(truckInstance.getVehiclePapers(), "Your vehicle has 8 wheels and as a result, you get a class C license");
 				 });
 			});
 
